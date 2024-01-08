@@ -1,0 +1,24 @@
+{% block content  %}
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>book record</title>
+</head>
+<body>
+	<h1>book detailes</h1>
+	{% for i in book %}
+	<label>book title</label>
+	{{i.book_title}}
+	<label>book author</label>
+	{{i.author_name}}
+	<label>price</label>
+	{{i.price}}
+	<label>Publish date</label>
+	{{i.publish_date}}
+	{% endfor %}
+</body>
+</html>
+{% endblock content %}

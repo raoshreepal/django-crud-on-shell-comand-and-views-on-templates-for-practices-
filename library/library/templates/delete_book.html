@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Head content -->
+</head>
+<body>
+    <div style="margin-left: 450px;background: #0012;width:25%;">
+    <h1>Delete Book</h1>
+    <p >Are you sure you want to delete '{{ book.book_title }}'?</p>
+    <form method="post" >
+        {% csrf_token %}
+        <button  style="margin-left:20% ;cursor: pointer;"type="submit" onclick="sublit()">Confirm Delete</button>
+    </form>
+    <script type="text/javascript">
+        function sublit() {
+            // body...
+            alert('deleted');
+        }
+    </script>
+</div>
+</body>
+</html>

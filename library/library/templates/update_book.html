@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Head content -->
+</head>
+<body>
+    <h1 style="margin-left:450px">Update Book</h1>
+    <div style="margin-left: 450px;background: #0012;width:25%;">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button style="margin-left:20% ;cursor: pointer;" onclick="update()" type="submit">Update</button>
+    </form>
+     <script type="text/javascript">
+        function update() {
+            // body...
+            alert('delrecord successfully addedd..');
+        }
+    </script>
+</div>
+</body>
+</html>

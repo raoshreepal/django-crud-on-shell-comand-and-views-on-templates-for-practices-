@@ -1,0 +1,44 @@
+create model from models.py
+go to CMD 
+1.python manage.py show migrations
+2.pytohn manage.py makemigrations
+3.python manage.py migrate
+
+then 
+python manage.py shell
+1. insert data
+from your_app.models import Book
+from django.utils import timezone
+
+# Create a new Book instance and save it to the database
+new_book = Book(
+    book_title='Title',
+    author_name='Author',
+    price=29.99,
+    publish_date=timezone.now()
+)
+new_book.save()
+
+display record
+all_books = Book.objects.all()
+
+fetch data 
+book = Book.objects.get(pk=1)  # Replace 1 with the desired ID
+ 
+ update data
+
+book = Book.objects.get(pk=1)  # Replace 1 with the desired ID
+book.book_title = 'New Title'
+book.save()
+
+delete data
+book = Book.objects.get(pk=1)  # Replace 1 with the desired ID
+book.delete()
+then exit from shell
+exit()
+
+4. create super user for admin 
+python manage.py createsuperuser
+username=admin
+password=admin
+email=admin@gmail.co
